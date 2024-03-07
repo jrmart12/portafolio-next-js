@@ -1,33 +1,80 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import Brain from "@/components/brain";
+import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
+
 const AboutPage = () => {
+  const containerRef = useRef();
+
+  const { scrollYProgress } = useScroll({ container: containerRef });
+
+  const skillRef = useRef();
+  // const isSkillRefInView = useInView(skillRef, {once:true});
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+
+  const experienceRef = useRef();
+  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+
   return (
     <motion.div
-      className="h-full "
+      className="h-full"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      {/* Container */}
-      <div className="h-full overflow-scroll">
-        {/* Text Container */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 l:p-30 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64">
-          {/* Biography Container */}
-          <div className="flex flex-col gap-12 justify-center">
-            {/* Title */}
-            <h1 className="font-bold text-2xl">Biography</h1>
-            {/* Paragraph */}
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              corporis, repudiandae consequuntur maxime aperiam impedit
-              repellendus laboriosam veritatis nostrum dolore quia libero nobis
-              voluptatibus commodi fuga eum ipsam, vel saepe.
+      {/* CONTAINER */}
+      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+        {/* TEXT CONTAINER */}
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-24 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+          {/* BIOGRAPHY CONTAINER */}
+          <div className="flex flex-col gap-6 justify-center">
+            {/* BIOGRAPHY IMAGE */}
+
+            {/* BIOGRAPHY TITLE */}
+            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            {/* BIOGRAPHY DESC */}
+            <p className="text-md">
+              Hello there! I'm Jose Martinez Bardales, a dedicated Front End
+              Developer with four years of experience in the tech industry. My
+              journey into coding began with a fascination for technology and a
+              desire to create impactful solutions. Over the years, I've had the
+              privilege of collaborating with various companies, from fintech
+              teams to small-scale internal project teams, each offering unique
+              challenges and learning opportunities.
             </p>
-            {/* Paragraph 2 */}
+            <p className="text-md">
+              Having worked closely with US-based companies, I've immersed
+              myself in cutting-edge tools and technologies, enriching my skill
+              set and broadening my perspective on modern web development
+              practices.
+            </p>
+            <p className="text-md">
+              Beyond my professional endeavors, I'm passionate about sharing my
+              knowledge and empowering aspiring developers. As part of my
+              commitment to fostering a thriving tech community, I'm embarking
+              on a journey to create educational content, particularly tailored
+              for Spanish-speaking developers. Through engaging YouTube
+              tutorials, I aspire to demystify the world of coding and guide
+              enthusiasts from beginner to full stack proficiency.
+            </p>
+            <p className="text-md">
+              At 24 years old, I find myself embracing the joys of fatherhood,
+              blessed with two beautiful children who constantly inspire me to
+              strive for excellence in all aspects of life.
+            </p>
+            <p className="text-md">
+              I thrive on challenges, relishing the opportunity to tackle
+              complex problems with enthusiasm and tenacity. With an insatiable
+              hunger for learning and a knack for problem-solving, I'm committed
+              to pushing boundaries, innovating relentlessly, and leaving a
+              meaningful impact on the digital landscape. Join me on this
+              journey of exploration, creation, and empowerment as we craft a
+              future where technology knows no bounds.
+            </p>
+            {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Let's build something remarkable together.
             </span>
             {/* Biography Sign SVG */}
             <div className="self-end">
@@ -63,57 +110,100 @@ const AboutPage = () => {
               ></path>
             </motion.svg>
           </div>
-          {/* skills Container */}
-          <div className="flex flex-col gap-12 justify-center">
-            {/* Title */}
-            <h1 className="font-bold text-2xl">Skills</h1>
-            {/* Skill List */}
-            <div className="flex gap-4 flex-wrap">
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+          {/* SKILLS CONTAINER */}
+          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+            {/* SKILL TITLE */}
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl"
+            >
+              SKILLS
+            </motion.h1>
+            {/* SKILL LIST */}
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              className="flex gap-4 flex-wrap"
+            >
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Javascript
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Typescript
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                ReasonML
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Astro
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 React.js
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Vue.js
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                React Native
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Next.js
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Nuxt.js
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                SCSS
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                CSS
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                MongoDB
               </div>
-
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                PostgreSQL
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                GraphQL
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Node.js
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Express.js
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Apollo
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                javascript
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Redux
               </div>
-            </div>
-            {/* Scroll SVG */}
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Pinia
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Webpack
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Auth0
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Okta
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Firebase
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Git
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Figma
+              </div>
+            </motion.div>
+            {/* SKILL SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
@@ -137,54 +227,132 @@ const AboutPage = () => {
               ></path>
             </motion.svg>
           </div>
-          {/* experience Container */}
-          <div className="flex flex-col gap-12 justify-center pb-48">
-            {/* Title */}
-            <h1 className="font-bold text-2xl">Experience</h1>
-            {/* Container */}
-            <div className="">
-              {/* Listitem */}
-              <div className="flex justify-between h-48 ">
-                {/* Left */}
-                <div className="w-1/3 ">
-                  {/* Job Title */}
+          {/* EXPERIENCE CONTAINER */}
+          <div
+            className="flex flex-col gap-12 justify-center pb-48"
+            ref={experienceRef}
+          >
+            {/* EXPERIENCE TITLE */}
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isExperienceRefInView ? { x: "0" } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl"
+            >
+              EXPERIENCE
+            </motion.h1>
+            {/* EXPERIENCE LIST */}
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isExperienceRefInView ? { x: "0" } : {}}
+              className=""
+            >
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3">
+                  {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
                     Mid Software Engineer
                   </div>
-                  {/* Job Description */}
+                  {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    {" "}
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Necessitatibus ullam suscipit, illum quidem ducimus odio
-                    neque ratione facere asperiores sit cumque est recusandae
-                    explicabo placeat. Numquam iure reprehenderit obcaecati
-                    magni!
+                    Worked in multiple projects with React.js as well as working
+                    in a fintech app from scratch with Nuxt.js
                   </div>
-                  {/* Job Date */}
+                  {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2024 - Present
+                    2022 - Present
                   </div>
-                  {/* Job Company */}
+                  {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
                     Hello Iconic
                   </div>
                 </div>
-                {/* Center */}
-                <div className="w-1/6 bg-red-400">
-                  {/* Line */}
-                  <div className="">
-                    {/* Circle */}
-                    <div className=""></div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* LINE CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
                   </div>
                 </div>
-                {/* Right */}
-                <div className="w-1/3 bg-blue-400"></div>
+                {/* RIGHT */}
+                <div className="w-1/3 "></div>
               </div>
-            </div>
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3 "></div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* LINE CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3 ">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Front End Engineer
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    I spearheaded React-based application development,
+                    leveraging advanced skills.
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    2020 - 2022
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                    Linkrease Technologies
+                  </div>
+                </div>
+              </div>
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3 ">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Full Stack Engineer Intern
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    I provided web solutions, applying a range of technologies
+                    to address internal projects requirements.
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    2020 - 2020
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                    Hero Unit
+                  </div>
+                </div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* LINE CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3 "></div>
+              </div>
+            </motion.div>
           </div>
         </div>
-        {/* Svg Container */}
-        <div className="hidden"></div>
+        {/* SVG CONTAINER */}
+        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
+          <Brain scrollYProgress={scrollYProgress} />
+        </div>
       </div>
     </motion.div>
   );
