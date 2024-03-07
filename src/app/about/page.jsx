@@ -83,6 +83,7 @@ const AboutPage = () => {
                 alt=""
                 width={185}
                 height={77}
+                placeholder="blur"
                 className="w-48 h-38 rounded-full object-cover"
               />
             </div>

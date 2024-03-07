@@ -89,10 +89,22 @@ const Navbar = () => {
       {/*Links social */}
       <div className="hidden md:flex flex-row gap-4 w-1/3 justify-end">
         <Link href="https://github.com/jrmart12">
-          <Image src="/github.png" width={24} height={24} alt="" />
+          <Image
+            src="/github.png"
+            width={24}
+            height={24}
+            alt=""
+            placeholder="blur"
+          />
         </Link>
         <Link href="https://www.linkedin.com/in/jose-martinez-706253100/">
-          <Image src="/linkedin.png" width={24} height={24} alt="" />
+          <Image
+            src="/linkedin.png"
+            width={24}
+            height={24}
+            alt=""
+            placeholder="blur"
+          />
         </Link>
       </div>
       {/*Hamburger menu on sm */}

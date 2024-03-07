@@ -17,7 +17,9 @@ const Homepage = () => {
             src="/cartoon-rounded.png"
             alt=""
             fill
+            placeholder="blur"
             className="object-contain p-8"
+            priority
           />
         </div>
         {/* Text container */}
