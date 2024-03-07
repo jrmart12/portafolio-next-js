@@ -35,24 +35,24 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-md">
-              Hello there! I'm Jose Martinez Bardales, a dedicated Front End
+              Hello there! I`m Jose Martinez Bardales, a dedicated Front End
               Developer with four years of experience in the tech industry. My
               journey into coding began with a fascination for technology and a
-              desire to create impactful solutions. Over the years, I've had the
+              desire to create impactful solutions. Over the years, I`ve had the
               privilege of collaborating with various companies, from fintech
               teams to small-scale internal project teams, each offering unique
               challenges and learning opportunities.
             </p>
             <p className="text-md">
-              Having worked closely with US-based companies, I've immersed
+              Having worked closely with US-based companies, I`ve immersed
               myself in cutting-edge tools and technologies, enriching my skill
               set and broadening my perspective on modern web development
               practices.
             </p>
             <p className="text-md">
-              Beyond my professional endeavors, I'm passionate about sharing my
+              Beyond my professional endeavors, I`m passionate about sharing my
               knowledge and empowering aspiring developers. As part of my
-              commitment to fostering a thriving tech community, I'm embarking
+              commitment to fostering a thriving tech community, I`m embarking
               on a journey to create educational content, particularly tailored
               for Spanish-speaking developers. Through engaging YouTube
               tutorials, I aspire to demystify the world of coding and guide
@@ -66,7 +66,7 @@ const AboutPage = () => {
             <p className="text-md">
               I thrive on challenges, relishing the opportunity to tackle
               complex problems with enthusiasm and tenacity. With an insatiable
-              hunger for learning and a knack for problem-solving, I'm committed
+              hunger for learning and a knack for problem-solving, I`m committed
               to pushing boundaries, innovating relentlessly, and leaving a
               meaningful impact on the digital landscape. Join me on this
               journey of exploration, creation, and empowerment as we craft a
@@ -74,7 +74,7 @@ const AboutPage = () => {
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Let's build something remarkable together.
+              Let`s build something remarkable together.
             </span>
             {/* Biography Sign SVG */}
             <div className="self-end">

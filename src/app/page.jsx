@@ -28,7 +28,7 @@ const Homepage = () => {
           </h1>
           {/* Description */}
           <p className="md:text-xl">
-            I'm Jose Rodolfo Martinez a Computer Systems Engineer based in
+            I`m Jose Rodolfo Martinez a Computer Systems Engineer based in
             Honduras
           </p>
           {/* Buttons */}
