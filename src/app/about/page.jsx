@@ -2,6 +2,7 @@
 import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
+import signImg from "../../../public/sign.png";
 import { useRef } from "react";
 
 const AboutPage = () => {
@@ -79,13 +80,13 @@ const AboutPage = () => {
             {/* Biography Sign SVG */}
             <div className="self-end">
               <Image
-                src="/sign.png"
-                alt=""
-                width={185}
-                height={77}
-                placeholder="blur"
-                className="w-48 h-38 rounded-full object-cover"
-              />
+                  src={signImg}
+                  alt=""
+                  width={185}
+                  height={77}
+                  placeholder="blur"
+                  className="w-48 h-38 rounded-full object-cover"
+                />
             </div>
             {/* Scroll SVG */}
             <motion.svg

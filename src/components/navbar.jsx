@@ -94,7 +94,6 @@ const Navbar = () => {
             width={24}
             height={24}
             alt=""
-            placeholder="blur"
           />
         </Link>
         <Link href="https://www.linkedin.com/in/jose-martinez-706253100/">
@@ -103,7 +102,6 @@ const Navbar = () => {
             width={24}
             height={24}
             alt=""
-            placeholder="blur"
           />
         </Link>
       </div>

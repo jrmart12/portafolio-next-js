@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import cartoonRounded from "../../public/cartoon-rounded.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 const Homepage = () => {
@@ -14,7 +15,7 @@ const Homepage = () => {
         {/* Image container */}
         <div className="h-1/2 relative lg:h-full lg:w-1/2">
           <Image
-            src="/cartoon-rounded.png"
+            src={cartoonRounded}
             alt=""
             fill
             placeholder="blur"
