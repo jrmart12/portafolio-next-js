@@ -8,7 +8,7 @@ const items = [
     id: 1,
     title: "Premium Meats Honduras",
     desc: "A modern, responsive e-commerce website built for a local premium butcher in La Ceiba, Honduras.",
-    img: "/premium-meats.svg",
+    img: "/premium-meats.png",
     liveUrl: "https://premium-meats.vercel.app/",
     tech: ["Next.js", "TypeScript", "Tailwind", "Sanity", "Framer Motion"],
   },
