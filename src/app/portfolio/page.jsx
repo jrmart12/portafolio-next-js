@@ -23,7 +23,7 @@ const items = [
     {
     id: 3,
     title: "House Kitchen",
-    desc: "A Next.js app built with the App Router, designed for speed and modern UX, deployed on Vercel.",
+    desc: "A restaurant website built with the Next.js App Router — users can view the menu, place orders, and continue the order process via WhatsApp for payment and delivery.",
     img: "/house-kitchen.png",
     liveUrl: "https://house-kitchen.vercel.app/",
     tech: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
