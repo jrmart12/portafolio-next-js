@@ -20,14 +20,23 @@ const items = [
     liveUrl: "https://newperspectivecayman.com/",
     tech: ["Astro", "Netlify"],
   },
-  {
+    {
     id: 3,
+    title: "House Kitchen",
+    desc: "A Next.js app built with the App Router, designed for speed and modern UX, deployed on Vercel.",
+    img: "/house-kitchen.png",
+    liveUrl: "https://house-kitchen.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
+  },
+  {
+    id: 4,
     title: "Portfolio Website",
     desc: "This Website is made in Next.js and uses framer motion for effects",
     img: "/portfolio.png",
     slug: "https://jr-martinez.com/",
     tech: ["Next.js", "Tailwind", "Framer Motion"],
   },
+
 ];
 
 const PortfolioPage = () => {
