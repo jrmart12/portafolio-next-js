@@ -104,12 +104,12 @@ const PortfolioPage = () => {
       <footer className="max-w-5xl mx-auto text-center mt-20 py-12 border-t border-gray-300">
         <h3 className="text-3xl font-bold mb-4">
           <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Let's Work Together
+            Let&apos;s Work Together
           </span>
         </h3>
         <p className="text-gray-600 mb-6 max-w-xl mx-auto">
           I help companies and startups build modern, fast, and scalable web applications.
-          From e-commerce platforms to fintech solutions, let's create something amazing.
+          From e-commerce platforms to fintech solutions, let&apos;s create something amazing.
         </p>
         <Link href="/contact">
           <motion.button

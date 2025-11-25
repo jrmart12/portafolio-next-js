@@ -38,7 +38,7 @@ const Homepage = () => {
           </h2>
           {/* Description */}
           <p className="md:text-xl text-gray-600 leading-relaxed">
-            I'm <strong>Jose Rodolfo Martinez</strong>, a Full Stack Software Engineer
+            I&apos;m <strong>Jose Rodolfo Martinez</strong>, a Full Stack Software Engineer
             with 4+ years of experience specializing in <strong>React</strong>, <strong>Next.js</strong>,
             and modern web technologies. Based in Honduras, I craft scalable e-commerce platforms
             and fintech applications for companies worldwide.
