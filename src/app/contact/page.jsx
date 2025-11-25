@@ -40,7 +40,7 @@ const ContactPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+      <div className="h-full h-[50vh] flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* TEXT CONTAINER */}
         <div className="h-1/3 lg:h-full lg:w-1/2 flex items-center justify-center lg:text-6xl text-5xl">
           <div>
@@ -72,15 +72,17 @@ const ContactPage = () => {
             rows={6}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
+            required
           />
           <span>My email address is:</span>
           <input
             name="user_email"
-            type="text"
+            type="email"
             className="bg-transparent border-b-2 border-b-black outline-none"
+            required
           />
           <span>Regards</span>
-          <button className="bg-black rounded font-semibold text-white p-4">
+          <button className="bg-black rounded font-semibold text-white p-4 hover:bg-gray-800 transition-colors">
             Send
           </button>
           {success && (
