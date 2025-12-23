@@ -33,15 +33,6 @@ const items = [
   },
   {
     id: 4,
-    title: "Baby Heaven Honduras",
-    desc: "A modern, responsive e-commerce platform built for a baby shop in Honduras. Features real-time inventory management with Sanity CMS, seamless shopping experience, and bilingual support.",
-    img: "/babyheaven.png",
-    liveUrl: "https://babyheavenhn.com/",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Vercel", "Sanity"],
-    highlights: "E-commerce • CMS Integration • Mobile-First",
-  },
-  {
-    id: 5,
     title: "Portfolio Website",
     desc: "This portfolio website showcasing modern web development practices. Built with Next.js and enhanced with smooth animations using Framer Motion for an engaging user experience.",
     img: "/portfolio.png",
