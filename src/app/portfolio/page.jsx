@@ -42,12 +42,12 @@ const items = [
   },
   {
     id: 5,
-    title: "Portfolio Website",
-    desc: "This portfolio website showcasing modern web development practices. Built with Next.js and enhanced with smooth animations using Framer Motion for an engaging user experience.",
-    img: "/portfolio.png",
-    slug: "https://jr-martinez.com/",
-    tech: ["Next.js", "Tailwind", "Framer Motion"],
-    highlights: "Portfolio • Animations • Modern Design",
+    title: "Nayos Burger",
+    desc: "Full-featured restaurant website with online ordering system. Built with Next.js App Router, users can browse menu, customize orders, and complete purchases via WhatsApp integration for payment and delivery coordination.",
+    img: "/nayos.png",
+    slug: "https://nayosburger.com/",
+    tech: ["Next.js", "Tailwind", "Vercel"],
+    highlights: "Online Ordering • WhatsApp Integration • Real-time",
   },
 
 ];
