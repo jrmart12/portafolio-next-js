@@ -45,7 +45,7 @@ const items = [
     title: "Nayos Burger",
     desc: "Full-featured restaurant website with online ordering system. Built with Next.js App Router, users can browse menu, customize orders, and complete purchases via WhatsApp integration for payment and delivery coordination.",
     img: "/nayos.png",
-    slug: "https://nayosburger.com/",
+    liveUrl: "https://nayosburger.com/",
     tech: ["Next.js", "Tailwind", "Vercel"],
     highlights: "Online Ordering • WhatsApp Integration • Real-time",
   },
