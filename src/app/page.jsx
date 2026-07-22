@@ -12,9 +12,9 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="min-h-screen flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-30 h-[50vh]">
+      <div className="flex flex-col lg:flex-row lg:min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 xl:px-30 py-8 gap-8">
         {/* Image container */}
-        <div className="h-[50vh] relative lg:h-screen lg:w-1/2">
+        <div className="h-[45vh] w-full relative lg:h-auto lg:min-h-screen lg:w-1/2">
           <Image
             src={cartoonRounded}
             alt="Jose Martinez - Software Engineer"
@@ -25,12 +25,10 @@ const Homepage = () => {
           />
         </div>
         {/* Text container */}
-        <div className="h-1/2 flex flex-col gap-8 items-start justify-center lg:h-full lg:w-1/2">
+        <div className="flex flex-col gap-8 items-start justify-center lg:w-1/2">
           {/* Title */}
           <h1 className="text-4xl md:text-6xl font-bold">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Software Engineer
-            </span>
+            <span className="text-blue-600">Software Engineer</span>
           </h1>
           {/* Subtitle */}
           <h2 className="text-xl md:text-2xl font-semibold text-gray-700">
@@ -39,7 +37,7 @@ const Homepage = () => {
           {/* Description */}
           <p className="md:text-xl text-gray-600 leading-relaxed">
             I&apos;m <strong>Jose Rodolfo Martinez</strong>, a Full Stack Software Engineer
-            with 4+ years of experience specializing in <strong>React</strong>, <strong>Next.js</strong>,
+            with 6+ years of experience specializing in <strong>React</strong>, <strong>Next.js</strong>,
             and modern web technologies. Based in Honduras, I craft scalable e-commerce platforms
             and fintech applications for companies worldwide.
           </p>
@@ -48,19 +46,19 @@ const Homepage = () => {
             {["React", "Next.js", "TypeScript", "Node.js", "Tailwind"].map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full text-sm font-medium text-gray-700 border border-gray-300"
+                className="px-3 py-1 bg-gray-100 rounded-full text-sm font-medium text-gray-700 border border-gray-300"
               >
                 {tech}
               </span>
             ))}
           </div>
           {/* Buttons */}
-          <div className="w-full flex gap-4 mt-4">
+          <div className="w-full flex flex-wrap gap-4 mt-4">
             <Link href="/portfolio">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl transition-shadow"
+                className="px-6 py-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-shadow"
               >
                 View My Work
               </motion.button>
